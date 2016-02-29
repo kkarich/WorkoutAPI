@@ -61,7 +61,7 @@ class WorkoutExercisesController < ApplicationController
 
 
     def set_workout_exercise
-      @workout_exercise = WorkoutExercise.join(:exercises).find(params[:id])
+      @workout_exercise = WorkoutExercise.joins(:exercise).find(params[:id])
     end
 
     def workout_exercise_params
